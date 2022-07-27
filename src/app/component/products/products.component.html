@@ -1,0 +1,32 @@
+        <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search Products" style="display:inline-block" [(ngModel)]="filteredString" >
+                <!-- <span class="fas fa-search search-icon"></span> -->
+             
+              <strong>Select Category:</strong><select  defaultValue="Select Category"  style="display:inline-block" [(ngModel)]="filteredCat">
+                    <!-- <option value="none" selected disabled >  Select Category </option> -->
+                    <option disabled value="Select Category">Select Category</option>
+                    <option value="electronics">Electronics</option>
+                    <option value="men's clothing">Mens Clothing</option>
+                    <option value="women's clothing">Womens Clothing</option>
+                    <option value="jewelery">Jewllery</option>
+                    </select>
+              
+            </div>
+           
+
+
+
+<div class="container">
+    <div class="row">
+        <ng-container *ngFor="let item of productList | filter:filteredString | filter:filteredCat">
+            <div class="card col-md-3">
+                <img src="{{item.image}}" alt="">
+                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.title}}</h5>
+                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.category}}</h5>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+                <p><strong>Price:</strong> ${{item.price}}</p>
+                <button class="btn btn-primary" (click)=addtocart(item)>Add to cart</button>
+            </div>
+        </ng-container>
+    </div>
+</div>
