@@ -1,5 +1,7 @@
 # ECommerce/Task 2
 
+## I have used Angular  for development  of this task.
+
 ## I have used fake store API(Application Program Interface) to get the products data.
 
 1. First Clone the project.
