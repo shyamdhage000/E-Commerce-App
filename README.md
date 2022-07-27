@@ -30,4 +30,5 @@
 10. If you want to delete the perticular product from cart you can click on "Delete" button icon.
 11. If you want to remove all the products from cart item then you can click on "Empty Cart" button.
 12. Once you click on the Empty Cart Button then your cart will be empty.
-13. Here by clicking on "Shop Now" button you can shop more products.
+13. Here by clicking on "Shop Now" button you can shop more products
+
